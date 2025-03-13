@@ -1,21 +1,19 @@
-import React from 'react';
-import Header from './components/Header';
-import Scores from './components/Scores';
-import Statistic from './components/Statistic';
-import { HTML_RESULTS, CSS_RESULTS } from './data'; // Import your data
+import { Carousel } from "./components/Carousel";
 
-const App = () => {
+import { ALL_IMAGES } from "./data/imagesData.js";
+
+function App() {
   return (
-    <div>
-      <Header batchName="Batch 101" />
+    <>
+      <header>
+        <h1>Statue Game at PNV !</h1>
+        <p>Browse images using the arrows</p>
+      </header>
       <main>
-        <Scores courseName="HTML" courseResults={HTML_RESULTS} />
-        <Statistic courseResults={HTML_RESULTS} />
-        <Scores courseName="CSS" courseResults={CSS_RESULTS} />
-        <Statistic courseResults={CSS_RESULTS} />
+        <Carousel images={ALL_IMAGES} />
       </main>
-    </div>
+    </>
   );
-};
+}
 
 export default App;
